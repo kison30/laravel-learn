@@ -3213,6 +3213,10 @@ isstream@0.1.x, isstream@~0.1.2:
   version "0.1.2"
   resolved "http://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.8, js-base64@^2.1.9, js-base64@~2.1.8:
   version "2.1.9"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -3774,13 +3778,9 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/map-obj/download/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-map-stream@0.0.6:
+map-stream@0.0.6, map-stream@~0.0.4:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/map-stream/download/map-stream-0.0.6.tgz#d2ef4eb811a28644c7a8989985c69c2fdd496827"
-
-map-stream@~0.0.4:
-  version "0.0.7"
-  resolved "http://registry.npm.taobao.org/map-stream/download/map-stream-0.0.7.tgz#8a1f07896d82b10926bd3744a2420009f88974a8"
 
 marked-terminal@^1.6.2:
   version "1.7.0"
