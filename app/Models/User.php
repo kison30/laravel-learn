@@ -44,8 +44,13 @@ class User extends Model implements AuthenticatableContract,
      */
     public function gravatar($size = '100')
     {
-        $hash = md5(strtolower(trim($this->attributes['email'])));
+        $hash = md5(strtolower(trim('asde')));
         return "http://www.gravatar.com/avatar/$hash?s=$size";
+    }
+
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
     }
 
     /*
@@ -58,5 +63,11 @@ class User extends Model implements AuthenticatableContract,
         static::creating(function($user){
            $user->activation_token = str_random();
         });
+    }
+
+    public function feed()
+    {
+        return $this->statuses()
+                    ->orderBy('created_at','desc');
     }
 }

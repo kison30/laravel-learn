@@ -36,14 +36,17 @@ class UsersController extends Controller
     }
 
     /**
-     * @param $id
+     * @param User $user
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     * 展示用户信息
+     * 展示页面
      */
     public function show($id)
     {
-        $user = User::findOrfail($id);
-        return view('users.show',compact('user'));
+        $user = User::findOrFail($id);
+        $statuses = $user->statuses()
+                        ->orderBy('created_at','desc')
+                        ->paginate(30);
+        return view('users.show',compact('user','statuses'));
     }
 
     /**
@@ -146,5 +149,6 @@ class UsersController extends Controller
             $message->from($from,$name)->to($to)->subject($subject);
         });
     }
+
 
 }
